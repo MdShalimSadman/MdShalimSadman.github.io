@@ -12,14 +12,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "sunrises",\
+        "name": "portfolio",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["sunrises", ["workspace:."]]\
+      ["portfolio", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -6199,11 +6199,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["sunrises", [\
+      ["portfolio", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["sunrises", "workspace:."],\
+            ["portfolio", "workspace:."],\
             ["@next/font", "npm:13.1.6"],\
             ["@sendgrid/mail", "npm:7.7.0"],\
             ["@types/node", "npm:18.13.0"],\
