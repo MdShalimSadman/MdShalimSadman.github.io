@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
 import Institutes from '@/components/Institutes';
 import Certificates from '@/components/certificates';
-import Contact from '@/components/contact';
+import Contact from '@/components/Contact';
 import Sidebar from '@/components/Sidebar'
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="relative">
       <video className="fixed top-0 left-0 w-full h-full object-cover z-0" autoPlay loop muted>
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/video1.mp4" type="video/mp4" />
       </video>
 
       <div className="relative z-10">
