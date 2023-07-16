@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
 import Institutes from '@/components/Institutes';
 import Certificates from '@/components/certificates';
-import Contact from '@/components/contact';
+import Contact from '@/components/Contact';
 import Sidebar from '@/components/Sidebar'
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
