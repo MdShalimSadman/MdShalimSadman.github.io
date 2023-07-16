@@ -47,10 +47,7 @@ const Gallery = () => {
       <section className="py-8 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
-            PR<span className="text-blue-300">O</span>FESSIONAL 
-            <span className="text-blue-300"> & </span> 
-            VOLUN<span className="text-blue-300">T</span>EERING
-            E<span className="text-blue-300">X</span>PERIENCES
+            E<span className="text-blue-300">X</span>PERIENCE
           </h2>
         </div>
       </section>
