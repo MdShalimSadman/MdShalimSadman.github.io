@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
      <Head>
         <title>MD Shalim Sadman</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="OzeM1xWgaOz5sMqu5Gu-TjdKIUocxhXXQMyEVLWbLfw" />
         <link rel="icon" href="/logo1.png" />
       </Head>
     <Component {...pageProps} />
