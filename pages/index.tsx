@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
     <div className="relative bg-[#132E52] overflow-x-hidden">
-      <video className="fixed top-0 left-0 w-full h-full object-cover z-0 " autoPlay loop muted >
+      <video className="fixed top-0 left-0 w-screen h-full object-cover z-0 opacity-50" autoPlay loop muted >
         <source src="/video1.mp4" type="video/mp4" />
       </video>
 
