@@ -36,6 +36,7 @@
     "react-owl-carousel": "^2.3.3",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.8.1",
+    "react-scroll": "^1.8.9",
     "react-scrollama": "^2.3.2",
     "react-transition-group": "^4.4.5",
     "typescript": "4.9.5"

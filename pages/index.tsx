@@ -10,8 +10,13 @@ import Contact from '@/components/Contact';
 import Sidebar from '@/components/Sidebar'
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function Home() {
+
+ 
+  const contactRef = useRef(null);
+
   const [typedText, setTypedText] = useState('');
   const textToType = 'WEB DEVELOPER';
   let index = 0;
@@ -50,14 +55,15 @@ export default function Home() {
   });
 
   return (
-    <div className="relative bg-blue-900">
-      <video className="fixed top-0 left-0 w-full h-full object-cover z-0" autoPlay loop muted>
+    <div className="relative bg-[#0E1C71]">
+      <video className="fixed  top-0 left-0 w-full h-full object-cover z-0" autoPlay loop muted>
         <source src="/video1.mp4" type="video/mp4" />
       </video>
 
       <div className="relative z-10">
         <Navbar />
-        <div className="py-10" ref={titleRef}>
+       
+        <div className="py-10" ref={titleRef} >
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={titleInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
@@ -66,7 +72,7 @@ export default function Home() {
             <Title />
           </motion.div>
         </div>
-        <div className="py-12" ref={aboutMeRef}>
+        <div className="py-12" ref={aboutMeRef} id="aboutMeRef">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={aboutMeInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
@@ -75,7 +81,7 @@ export default function Home() {
             <AboutMe />
           </motion.div>
         </div>
-        <div className="py-8" ref={skillsRef}>
+        <div className="py-8" ref={skillsRef} id="skillsRef">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={skillsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
@@ -84,7 +90,7 @@ export default function Home() {
             <Skills />
           </motion.div>
         </div>
-        <div className="py-8" ref={projectsRef}>
+        <div className="py-8" ref={projectsRef} id="projectsRef">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={projectsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
@@ -93,7 +99,7 @@ export default function Home() {
             <Projects />
           </motion.div>
         </div>
-        <div className="py-8 mt-7" ref={institutesRef}>
+        <div className="py-8 mt-7" ref={institutesRef} id="institutesRef">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={institutesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
@@ -103,8 +109,10 @@ export default function Home() {
           </motion.div>
         </div>
         {/* <Certificates/> */}
-        <Contact/>
-        <Sidebar/>
+        <div className="py-8" ref={contactRef} id="contactRef">
+          <Contact />
+        </div>
+        <Sidebar />
       </div>
     </div>
   );
