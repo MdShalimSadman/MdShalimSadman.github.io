@@ -52,32 +52,21 @@ const Gallery = () => {
         </div>
       </section>
 
-      <table className="w-full border border-blue-300 shadow-lg" style={{ tableLayout: 'fixed' }}>
-        <tbody>
-          {images.map((image, index) => (
-            index % 3 === 0 && (
-              <tr key={index}>
-                {images.slice(index, index + 3).map((data, i) => (
-                  <td
-                    key={index + i}
-                    className="p-4 text-center border border-blue-300"
-                    style={{ width: '33.33%' }}
-                  >
-                    <div>
-                      <img src={data.src} alt={`image-${index}`} className="h-40 mx-auto mb-4" />
-                      <h4 className="text-lg font-bold mb-2 text-white">{data.companyName}</h4>
-                      <p className="text-sm text-white">{data.position}</p>
-                      <p className="text-sm text-white">{data.duration}</p>
-                    </div>
-                  </td>
-                ))}
-              </tr>
-            )
+      <div className="w-full border border-blue-300 shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {images.map((data, index) => (
+            <div key={index} className="p-4 border border-blue-300 flex flex-col justify-center items-center md:items-center">
+              <img src={data.src} alt={`image-${index}`} className="h-40 mx-auto mb-4" />
+              <h4 className="text-lg font-bold mb-2 text-white">{data.companyName}</h4>
+              <p className="text-sm text-white">{data.position}</p>
+              <p className="text-sm text-white">{data.duration}</p>
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </>
   );
+
 };
 
 export default Gallery;
