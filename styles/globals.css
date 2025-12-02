@@ -5,3 +5,33 @@
 body{
     overflow-x: hidden;
 }
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background:#93c5fd;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: transparent;
+  background: #3b82f6;
+}
+
+::selection {
+  color: transparent;
+  background: #3b82f6;
+}
+
