@@ -64,6 +64,7 @@ const ContactForm = () => {
           </h2>
         </div>
       </section>
+      <div className='px-8'>
       <form
         ref={form} // 5. Attach the ref to the form
         onSubmit={handleSubmit} // 6. Attach the submit handler
@@ -118,6 +119,7 @@ const ContactForm = () => {
           </button>
         </div>
       </form>
+      </div>
     </>
   );
 };

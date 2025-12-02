@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/captchaapi.js", "components/LandingPageProduct2.js", "components/Slider.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/captchaapi.js", "components/LandingPageProduct2.js", "components/Slider.js", "components/Institutes.js"],
   "exclude": ["node_modules"]
 }
