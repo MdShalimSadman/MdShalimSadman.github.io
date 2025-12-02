@@ -44,7 +44,7 @@ const Gallery = () => {
 
   return (
     <>
-      <section className="py-8 text-white">
+      <section className=" text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
             E<span className="text-blue-300">X</span>PERIENCE
@@ -52,7 +52,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <div className="w-full border border-blue-300 shadow-lg">
+      <div className=" m-8 border border-blue-300 shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-3 ">
           {images.map((data, index) => (
             <div key={index} className="p-4 border border-blue-300 flex flex-col justify-center items-center md:items-center">

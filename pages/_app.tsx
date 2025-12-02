@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="google-site-verification" content="OzeM1xWgaOz5sMqu5Gu-TjdKIUocxhXXQMyEVLWbLfw" />
         <meta
             name="description"
-            content="I am MD Shalim Sadman, a web developer. Welcome to my portfolio website"
+            content="I am MD Shalim Sadman, a Software Engineer. Welcome to my portfolio website"
           />
         <link rel="icon" href="/logo1.png" />
         

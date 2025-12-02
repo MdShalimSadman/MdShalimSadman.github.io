@@ -24,7 +24,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <div className="flex flex-wrap overflow-hidden">
+      <div className="flex p-8 flex-wrap overflow-hidden">
         {images.map((image, index) => (
           <div
             key={index}

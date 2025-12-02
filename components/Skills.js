@@ -80,10 +80,6 @@ const Skills = () => {
               <img src="/firebase.png" alt="Firebase" className="w-12 h-12" />
               <span className="text-white">Firebase</span>
             </div>
-            <div className="flex flex-col items-center mb-2">
-              <img src="/sendgrid.png" alt="Sendgrid" className="w-12 h-12 " />
-              <span className="text-white">Sendgrid</span>
-            </div>
           </div>
         </div>
 
@@ -155,10 +151,6 @@ const Skills = () => {
             <div className="flex flex-col items-center mr-8 mb-4">
               <img src="/firebase.png" alt="Firebase" className="w-12 h-12 mb-2" />
               <span className="text-white">Firebase</span>
-            </div>
-            <div className="flex flex-col items-center mr-8 mb-4">
-              <img src="/sendgrid.png" alt="Sendgrid" className="w-12 h-12 mb-2" />
-              <span className="text-white">Sendgrid</span>
             </div>
           </div>
         </div>
