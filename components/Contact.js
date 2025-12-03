@@ -59,12 +59,12 @@ const ContactForm = () => {
     <>
       <section className="py-8 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="md:text-6xl md:font-bold text-3xl font-semiboldmb-9 text-center animate-slide-in-left">
+          <h2 className="md:text-6xl md:font-bold text-3xl font-semibold mb-9 animate-slide-in-left">
             CON<span className="text-blue-300">T</span>ACT
           </h2>
         </div>
       </section>
-      <div className='px-8'>
+      <div className='px-2 md:px-8'>
       <form
         ref={form} // 5. Attach the ref to the form
         onSubmit={handleSubmit} // 6. Attach the submit handler
@@ -75,7 +75,7 @@ const ContactForm = () => {
             type="text"
             // 7. Add 'name' attribute matching your template variable
             name="name" 
-            className="w-full bg-transparent border border-blue-200 text-white py-2 px-3 placeholder-white focus:outline-none focus:border-blue-500"
+            className="!text-start w-full bg-transparent border border-blue-200 text-white py-2 px-3 placeholder-white/40 focus:outline-none focus:border-blue-500"
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)} // Keep for controlled input if needed
@@ -87,7 +87,7 @@ const ContactForm = () => {
             type="email"
             // 7. Add 'name' attribute matching your template variable
             name="email" 
-            className="w-full bg-transparent border border-blue-200 text-white py-2 px-3 placeholder-white focus:outline-none focus:border-blue-500"
+            className="!text-start w-full bg-transparent border border-blue-200 text-white py-2 px-3 placeholder-white/40 focus:outline-none focus:border-blue-500"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)} // Keep for controlled input if needed
@@ -98,7 +98,7 @@ const ContactForm = () => {
           <textarea
             // 7. Add 'name' attribute matching your template variable
             name="message" 
-            className="w-full bg-transparent border border-blue-200 text-white py-2 px-3 placeholder-white focus:outline-none focus:border-blue-500"
+            className="!text-start w-full bg-transparent border border-blue-200 text-white py-2 px-3 placeholder-white/40 focus:outline-none focus:border-blue-500"
             rows="5"
             placeholder="Message"
             value={message}
