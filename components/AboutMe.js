@@ -16,7 +16,7 @@ export default function AboutMe() {
           data-aos-duration="2500"
           style={{ fontSize: '1.5rem' }}
         >
-          <span style={{ color: 'skyblue', fontSize: '3.5rem', fontWeight: 'normal' }}>Hello!</span> I am MD. Shalim Sadman. I am a web developer and have front-end development experience in the software industry. Additionally, I have volunteered with a renowned open-source organization, Mozilla. My expertise includes professional e-commerce website development, and I am highly skilled in exhibiting adaptability, event management, teamwork, and emotional intelligence. 
+          <span style={{ color: 'skyblue', fontSize: '3.5rem', fontWeight: 'normal' }}>Hello!</span> I am MD. Shalim Sadman. I am a software engineer and have front-end development experience in the software industry. Additionally, I have volunteered with a renowned open-source organization, Mozilla. I am highly skilled in exhibiting adaptability, event management, teamwork, and emotional intelligence. 
         </p>
       </div>
     </div>

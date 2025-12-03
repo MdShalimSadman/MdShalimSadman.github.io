@@ -5,35 +5,38 @@ import { useState } from "react";
 // ========================
 const images = [
   {
-    src: "/images/neovotech.jpg",
-    companyName: "Neovotech",
-    position: "Software Engineer (Frontend)",
-    duration: "Oct 2023 - Present",
-    roles: [
-      "Worked on 7+ responsive web and mobile apps, fixing layout and performance issues with Next.js, Tailwind CSS, and React Native.",
-      "Managed Git workflows for smooth team collaboration.",
-      "Delivered features using Agile/Kanban, resolving integration issues, and improving prioritization.",
-    ],
-    url: "https://www.neovotech.com/",
+    src: "/images/mozilla.jpg",
+    companyName: "Mozilla Firefox",
+    position: "Contributor",
+    duration: "Feb 2022 - Jan 2023",
+    roles: ["Contributed in the topic localization", "Translated 44 sentences"],
+    url: "https://pontoon.mozilla.org/contributors/Th8lxDH6mYnt_a3S75R0J07CZEI/?fbclid=IwAR1KlpWmMzrI7_REp8jlrsnI-V-n1blSe1uFcM6spTRAIvfpDhCwhiSVwO8",
   },
   {
-    src: "/images/anwar.jpg",
-    companyName: "Anwar Technologies- Anwar Group of Industries",
-    position: "Web Developer Intern",
-    duration: "Jul 2023 - Oct 2023",
+    src: "/images/computerClub.jpg",
+    companyName: "AIUB Computer Club",
+    position: "General Member",
+    duration: "Jan 2020 - October 2022",
     roles: [
-      "Developed responsive web apps and fixed cross-browser UI issues with Angular, SCSS, and Bootstrap.",
-      "Delivered pixel-perfect designs while managing Git/GitLab version control.",
-      "Enhanced ERP modules by troubleshooting and collaborating with cross-functional teams.",
+      "Collaborated with research and development team.",
+      "Became logistic lead of Firefox at AIUB, a wing of AIUB Computer Club.",
     ],
-    url: "https://www.anwargroup.com/business-technology.html",
+    url: "https://aiubcc.org/",
+  },
+  {
+    src: "/images/firefoxAiub.png",
+    companyName: "Firefox @ AIUB",
+    position: "Logistic Lead",
+    duration: "Nov 2022 - Nov 2023",
+    roles: [
+      "Organized workshops on different topics of mozilla firefox",
+      "Hosted the event 'Moz Code'",
+    ],
+    url: "https://wiki.mozilla.org/Firefox_at_AIUB",
   },
 ];
 
-// ========================
-// FLIP CARD COMPONENT
-// ========================
-const Gallery = () => {
+const Club = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFlip = (index) => {
@@ -45,13 +48,14 @@ const Gallery = () => {
       <section className="text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
-            E<span className="text-blue-300">X</span>PERIENCE
+            VO<span className="text-blue-300">L</span>UNTEERING E
+            <span className="text-blue-300">X</span>PERIENCE
           </h2>
         </div>
       </section>
 
       <div className="m-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {images.map((data, index) => (
             <div
               key={index}
@@ -99,7 +103,7 @@ const Gallery = () => {
                     className="bg-transparent border border-white text-white hover:border-blue-400 hover:text-blue-400 rounded-lg px-4 py-2 flex items-center transition-colors duration-300 mx-auto"
                     onClick={(e) => e.stopPropagation()} // prevent flipping
                   >
-                    See Company Details →
+                    See Organization Details →
                   </a>
                 </div>
               </div>
@@ -119,4 +123,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Club;

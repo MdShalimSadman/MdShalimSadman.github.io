@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 export default function Title() {
   const [typedText, setTypedText] = useState('');
-  const textToType = 'WEB DEVELOPER';
+  const textToType = 'Software Engineer (Frontend)';
   let index = 0;
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
       setTypedText(textToType.substring(0, index));
       index++;
-    }, 200);
+    }, 50);
 
     return () => clearInterval(typingInterval);
   }, []);

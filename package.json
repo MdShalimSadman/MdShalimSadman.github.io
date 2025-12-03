@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@heroicons/react": "^1.0.6",
@@ -32,6 +33,7 @@
     "react-dom": "18.2.0",
     "react-google-recaptcha": "^2.1.0",
     "react-icons": "^4.7.1",
+    "react-intersection-observer": "^10.0.0",
     "react-messenger-customer-chat": "^0.8.0",
     "react-owl-carousel": "^2.3.3",
     "react-responsive-carousel": "^3.2.23",
@@ -39,6 +41,7 @@
     "react-scroll": "^1.8.9",
     "react-scrollama": "^2.3.2",
     "react-transition-group": "^4.4.5",
+    "sonner": "^2.0.7",
     "typescript": "4.9.5"
   },
   "devDependencies": {
