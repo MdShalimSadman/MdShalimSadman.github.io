@@ -34,6 +34,11 @@ const certificatesData = [
     title: "Mathematical Thinking for Computer Science",
     org: "UC San Diego",
   },
+  {
+    img: "/images/it_training.jpg",
+    title: "Hands on SQA and Cyber Security Course",
+    org: "IT Training BD",
+  },
 ]
 
 const cardVariants = {
@@ -64,7 +69,7 @@ const Certificates = () => {
       <section className="text-white z-10 relative min-h-screen">
         <Navbar />
         <div className="container mx-auto px-4">
-          <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
+          <h2 className="md:text-6xl md:font-bold text-3xl font-semiboldmb-9 text-center animate-slide-in-left">
             C<span className="text-blue-300">E</span>RTIFICATES
           </h2>
 

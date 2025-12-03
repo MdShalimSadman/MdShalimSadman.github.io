@@ -6,7 +6,7 @@ const CertificateHolder = () => {
         <>
       <section className="text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
+          <h2 className="md:text-6xl md:font-bold text-3xl font-semibold mb-9 text-center animate-slide-in-left">
             C<span className="text-blue-300">E</span>RTIFICATES
           </h2>
           <div className='flex mb-4 flex-col w-full justify-center items-center'>

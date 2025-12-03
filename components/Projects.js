@@ -18,7 +18,7 @@ const projects = [
     desc: "Company portfolio, portal and blog management.",
     tech: ["/next-2.png", "/tailwindcss.png", "/typescript.png", "/sanity.png"],
     url: "https://cedofinance.se/en",
-    github: null, // private repo
+    github: null,
   },
   {
     name: "AI Professional e-book & e-videos",
@@ -71,13 +71,14 @@ const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="text-white">
+    <section className="text-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-6xl font-bold mb-12 text-center">
+        <h2 className="md:text-6xl text-3xl font-bold mb-12 text-center">
           PRO<span className="text-blue-400">J</span>ECTS
         </h2>
 
-        <div className="flex space-x-4 overflow-hidden h-[400px] md:h-[500px] px-8">
+        {/* ✅ DESKTOP (SLIDER VIEW) */}
+        <div className="hidden md:flex space-x-4 overflow-hidden h-[500px] px-8">
           {projects.map((project, index) => {
             const isActive = index === activeIndex;
             const isAnyActive = activeIndex !== null;
@@ -97,16 +98,13 @@ const Gallery = () => {
                 onMouseEnter={() => setActiveIndex(index)}
                 onMouseLeave={() => setActiveIndex(null)}
               >
-                {/* IMAGE */}
                 <img
                   src={project.src}
                   alt={project.name}
-                  className={`w-full h-full object-cover transition-all duration-500
-                    ${isActive ? "filter-none" : "filter"}
-                  `}
+                  className="w-full h-full object-cover"
                 />
 
-                {/* ✅ TOP RIGHT LINKS (ONLY SHOW WHEN ACTIVE) */}
+                {/* TOP RIGHT LINKS */}
                 <div
                   className={`absolute top-3 right-3 flex gap-2 z-20 transition-all duration-500
                     ${
@@ -120,9 +118,9 @@ const Gallery = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-black/70 flex items-center justify-center p-2 text-xs rounded-md hover:text-blue-300 transition"
+                    className="bg-black/70 p-2 rounded-md hover:text-blue-300 transition"
                   >
-                    <FaExternalLinkAlt size={15}/>
+                    <FaExternalLinkAlt size={15} />
                   </a>
 
                   {project.github && (
@@ -130,16 +128,16 @@ const Gallery = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-black/70 flex items-center justify-center px-1 py-1 text-xs rounded-md hover:text-blue-300 transition"
+                      className="bg-black/70 p-2 rounded-md hover:text-blue-300 transition"
                     >
-                      <FaGithub size={20}/>
+                      <FaGithub size={18} />
                     </a>
                   )}
                 </div>
 
-                {/* OVERLAY DESCRIPTION */}
+                {/* OVERLAY */}
                 <div
-                  className={`absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 transition-all duration-500
+                  className={`absolute bottom-0 left-0 right-0 bg-black/70 p-4 transition-all duration-500
                     ${
                       isActive
                         ? "opacity-100 translate-y-0"
@@ -150,14 +148,13 @@ const Gallery = () => {
                   <h3 className="text-xl font-semibold">{project.name}</h3>
                   <p className="mt-2 text-sm">{project.desc}</p>
 
-                  {/* TECH STACK ICONS */}
-                  <div className="mt-3 flex items-center gap-3">
+                  <div className="mt-3 flex items-center md:gap-3 flex-wrap">
                     {project.tech?.map((icon, i) => (
                       <img
                         key={i}
                         src={icon}
                         alt="tech"
-                        className="h-6 w-6 object-contain"
+                        className="h-6 md:w-6 w-fit object-contain"
                       />
                     ))}
                   </div>
@@ -166,6 +163,76 @@ const Gallery = () => {
             );
           })}
         </div>
+
+       {/* ✅ MOBILE (STACK VIEW WITH TOP-RIGHT LINKS) */}
+<div className="md:hidden space-y-6">
+  {projects.map((project, index) => {
+    const isActive = index === activeIndex;
+
+    return (
+      <div
+        key={index}
+        className="relative rounded-xl overflow-hidden shadow-lg bg-black"
+        onClick={() => setActiveIndex(isActive ? null : index)}
+      >
+        {/* IMAGE */}
+        <img
+          src={project.src}
+          alt={project.name}
+          className="w-full h-[220px] object-cover"
+        />
+
+        {/* TOP RIGHT LINKS */}
+        <div
+          className="absolute top-3 right-3 flex gap-2 z-20"
+        >
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            className="bg-black/70 p-2 rounded-md hover:text-blue-300 transition"
+          >
+            <FaExternalLinkAlt size={15} />
+          </a>
+
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-black/70 p-2 rounded-md hover:text-blue-300 transition"
+            >
+              <FaGithub size={18} />
+            </a>
+          )}
+        </div>
+
+        {/* OVERLAY DESCRIPTION */}
+        <div className="p-4">
+          <h3 className="text-lg font-semibold">{project.name}</h3>
+
+          {isActive && (
+            <>
+              <p className="mt-2 text-sm text-gray-300">{project.desc}</p>
+
+              <div className="mt-3 !flex gap-3 flex-wrap justify-center">
+                {project.tech?.map((icon, i) => (
+                  <img
+                    key={i}
+                    src={icon}
+                    alt="tech"
+                    className="h-6 w-6 object-contain"
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    );
+  })}
+</div>
+
       </div>
     </section>
   );

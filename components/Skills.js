@@ -7,7 +7,7 @@ const Skills = () => {
 
         <section className="py-8 text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
+            <h2 className="md:text-6xl md:font-bold text-3xl font-semiboldmb-9 text-center animate-slide-in-left">
               MY <span className="text-blue-400">S</span>TACKS
             </h2>
           </div>
