@@ -83,7 +83,7 @@ const Certificates = () => {
           </div>
         </div>
 
-        <div className="mt-6 pb-6 space-y-3">
+        <div className="mt-6 pb-6 space-y-3 p-2">
           {certificatesData.map((item, index) => (
             <motion.div
               key={index}

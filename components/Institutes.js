@@ -50,7 +50,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <div className="m-8">
+      <div className="m-2 md:m-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {images.map((data, index) => (
             <div
@@ -85,7 +85,7 @@ const Gallery = () => {
                       My Roles & Contributions
                     </h3>
 
-                    <ul className="text-sm space-y-1">
+                    <ul className="text-[10px] md:text-sm space-y-1">
                       {data.roles.map((role, idx) => (
                         <li key={idx}>• {role}</li>
                       ))}
