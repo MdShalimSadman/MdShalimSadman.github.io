@@ -9,7 +9,7 @@ const images = [
     companyName: "Mozilla Firefox",
     position: "Contributor",
     duration: "Feb 2022 - Jan 2023",
-    roles: ["Contributed in the topic localization", "translated 44 sentences"],
+    roles: ["Contributed in the topic localization", "Translated 44 sentences"],
     url: "https://pontoon.mozilla.org/contributors/Th8lxDH6mYnt_a3S75R0J07CZEI/?fbclid=IwAR1KlpWmMzrI7_REp8jlrsnI-V-n1blSe1uFcM6spTRAIvfpDhCwhiSVwO8",
   },
   {
@@ -29,7 +29,7 @@ const images = [
     position: "Logistic Lead",
     duration: "Nov 2022 - Nov 2023",
     roles: [
-      "organized workshops on different topics of mozilla firefox",
+      "Organized workshops on different topics of mozilla firefox",
       "Hosted the event 'Moz Code'",
     ],
     url: "https://wiki.mozilla.org/Firefox_at_AIUB",
