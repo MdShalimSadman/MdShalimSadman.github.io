@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 import React from 'react'
+import { motion } from "framer-motion"
 
 const certificatesData = [
   {
@@ -18,23 +19,35 @@ const certificatesData = [
     title: "Code Yourself! An Introduction to Programming",
     org: "The University of Edinburgh",
   },
-   {
+  {
     img: "/images/leeds.jpeg",
     title: "Computer Programming for Everyone",
     org: "University of Leeds",
   },
-   {
+  {
     img: "/images/Duke_University.svg",
     title: "Java programming: Solving problems with Software",
     org: "Duke University",
   },
-     {
+  {
     img: "/images/san_diego.png",
     title: "Mathematical Thinking for Computer Science",
     org: "UC San Diego",
   },
-
 ]
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+}
 
 const Certificates = () => {
   return (
@@ -48,7 +61,7 @@ const Certificates = () => {
         <source src="/video1.mp4" type="video/mp4" />
       </video>
 
-      <section className="text-white z-10 relative h-screen">
+      <section className="text-white z-10 relative min-h-screen">
         <Navbar />
         <div className="container mx-auto px-4">
           <h2 className="text-6xl font-bold mb-9 text-center animate-slide-in-left">
@@ -67,8 +80,12 @@ const Certificates = () => {
 
         <div className="mt-6 pb-6 space-y-3">
           {certificatesData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              custom={index}
               className="border flex items-center gap-5 min-h-28 md:h-28 bg-gray-900 bg-opacity-50 border-6 border-blue-300 p-3 px-6 rounded-xl mx-auto max-w-2xl"
             >
               <Image
@@ -81,10 +98,10 @@ const Certificates = () => {
                 <h2 className="text-xl font-semibold">{item.title}</h2>
                 <p className="text-sm">{item.org}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-        
+
       </section>
     </div>
   )
