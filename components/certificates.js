@@ -84,11 +84,11 @@ const featuredItems = [
   },
   {
     id: 'san diego',
-    name: 'san diego',
+    name: 'San Diego',
     logo: (
       <Image
         src="/images/san_diego.png"
-        alt="san diego"
+        alt="San Diego"
         width={500}
         height={500}
         className="pointer-events-none h-10 w-auto select-none md:h-12"
@@ -113,6 +113,7 @@ const featuredItems = [
 const Certificate = () => {
   const [isHovered, setIsHovered] = useState(false);
 
+  // duplicate for infinite scroll
   const duplicatedItems = [...featuredItems, ...featuredItems];
 
   const scrollStyle = {
@@ -121,49 +122,34 @@ const Certificate = () => {
   };
 
   return (
-    <div className="mt-5 md:mt-7 px-0 lg:px-0">
+    <div className="mt-5 md:mt-7 px-2 lg:px-0">
       <div
         className="relative w-full overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 1.5rem)); }
-        }
-      `}</style>
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
 
-        {/* Removed both white gradient overlay divs */}
-
-        <div className="flex gap-12">
-          <div style={scrollStyle} className="flex flex-shrink-0 gap-20">
-            {duplicatedItems.map((item, index) => (
-              <div
-                key={`${item.id}-${index}`}
-                className="flex min-w-max items-center gap-3 transition-colors"
-              >
-                <div className="flex-shrink-0">{item.logo}</div>
-              </div>
-            ))}
-          </div>
-
+        <div className="!flex">
           <div
             style={scrollStyle}
-            className="flex flex-shrink-0 gap-12"
-            aria-hidden="true"
+            className="!flex gap-8 md:gap-12 whitespace-nowrap"
           >
             {duplicatedItems.map((item, index) => (
               <div
-                key={`${item.id}-copy-${index}`}
-                className="flex min-w-max items-center gap-3 transition-colors"
+                key={`${item.id}-${index}`}
+                className="inline-flex items-center gap-3 min-w-max"
               >
-                <div className="flex-shrink-0">{item.logo}</div>
+                {item.logo}
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </div>
   );
