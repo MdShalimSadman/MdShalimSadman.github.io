@@ -83,7 +83,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
 
-        <div className="py-10 md:pt-40" ref={titleRef}>
+        <div className="py-10 pt-40" ref={titleRef}>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={

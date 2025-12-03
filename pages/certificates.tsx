@@ -68,7 +68,7 @@ const Certificates = () => {
 
       <section className="text-white z-10 relative min-h-screen">
         <Navbar />
-        <div className="md:pt-40 container mx-auto px-4">
+        <div className="pt-40 container mx-auto px-4">
           <h2 className="md:text-6xl md:font-bold text-3xl font-semiboldmb-9 text-center animate-slide-in-left">
             C<span className="text-blue-300">E</span>RTIFICATES
           </h2>
