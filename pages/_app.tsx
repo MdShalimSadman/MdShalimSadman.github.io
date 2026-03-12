@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import type { AppProps } from 'next/app'
 
 import { CSSProperties } from 'react';
+import { Toaster } from 'sonner';
 
 
 
@@ -23,6 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
         
       </Head>
     <Component {...pageProps} />
-
+    <Toaster position="top-center" richColors />
   </>
 }

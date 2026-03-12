@@ -44,7 +44,7 @@ const ContactForm = () => {
       });
     })
     .then(() => {
-      toast.success("Success! an email has been sent");
+      toast.success("Thank you for reaching out! I'll get back to you soon.");
       resetForm();
       setIsLoading(false); 
     })
