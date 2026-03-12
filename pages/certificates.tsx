@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 import React from 'react'
-import { motion } from "framer-motion"
+import { motion, easeOut } from "framer-motion"
 
 const certificatesData = [
   {
@@ -49,7 +49,7 @@ const cardVariants = {
     transition: {
       delay: i * 0.15,
       duration: 0.6,
-      ease: "easeOut",
+      ease: easeOut,
     },
   }),
 }
