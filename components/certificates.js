@@ -113,42 +113,48 @@ const featuredItems = [
 const Certificate = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // duplicate for infinite scroll
-  const duplicatedItems = [...featuredItems, ...featuredItems];
-
-  const scrollStyle = {
-    animation: 'scroll 40s linear infinite',
-    animationPlayState: isHovered ? 'paused' : 'running',
-  };
-
   return (
     <div className="mt-5 md:mt-7 px-2 lg:px-0">
-      <div
-        className="relative w-full overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <style>{`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}</style>
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: marquee 40s linear infinite;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
-        <div className="!flex">
-          <div
-            style={scrollStyle}
-            className="!flex gap-8 md:gap-12 whitespace-nowrap"
-          >
-            {duplicatedItems.map((item, index) => (
-              <div
-                key={`${item.id}-${index}`}
-                className="inline-flex items-center gap-3 min-w-max"
-              >
-                {item.logo}
-              </div>
-            ))}
-          </div>
+      <div className="relative w-full overflow-hidden">
+        <div
+          className={`marquee-track gap-8 md:gap-12`}
+          style={{ animationPlayState: isHovered ? 'paused' : 'running' }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* First set */}
+          {featuredItems.map((item) => (
+            <div
+              key={`a-${item.id}`}
+              className="flex items-center min-w-max px-4 md:px-6"
+            >
+              {item.logo}
+            </div>
+          ))}
+          {/* Exact duplicate — makes the loop seamless */}
+          {featuredItems.map((item) => (
+            <div
+              key={`b-${item.id}`}
+              className="flex items-center min-w-max px-4 md:px-6"
+            >
+              {item.logo}
+            </div>
+          ))}
         </div>
       </div>
     </div>
